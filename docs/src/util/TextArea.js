@@ -7,10 +7,18 @@ class TextArea extends Component {
   constructor() {
     super();
     this.setValue = this.setValue.bind(this);
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(event) {
+    this.setState({ value: event.target.value });
+    if (this.props && this.props.onChange) {
+      this.props.onChange();
+    }
   }
   setValue(value) {
     this.setState({ value });
   }
+
   componentWillmount() {
     // this.state.value = this.props.value ? this.props.value : '';
   }
@@ -20,13 +28,16 @@ class TextArea extends Component {
     return (
       <textarea
         style={{
-          height: 200,
+          minHeight: 200,
           width: '100%',
         }}
         className={className}
         disabled={disabled}
+        onChange={this.onChange}
         value={value}
-      />
+      >
+        {value}
+      </textarea>
     );
   }
 }
@@ -35,6 +46,11 @@ TextArea.propTypes = {
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
   value: React.PropTypes.string,
+  onChange: React.PropTypes.func,
+};
+
+TextArea.defaultProps = {
+  disabled: false,
 };
 
 export { TextArea };

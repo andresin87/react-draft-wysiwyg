@@ -19,6 +19,8 @@ import image from '../icons/image.gif';
 import undo from '../icons/undo.gif';
 import redo from '../icons/redo.gif';
 
+import brackets from '../icons/brackets.svg';
+
 export const sampleToolbar = {
   inline: {
     bold: { icon: bold, className: 'demo-option-custom' },
@@ -98,5 +100,46 @@ export const sampleToolbar2 = {
   history: {
     undo: { icon: undo, className: 'demo-option-custom' },
     redo: { icon: redo, className: 'demo-option-custom' },
+  },
+};
+
+export const sampleToolbar3 = {
+  inline: {
+    bold: { icon: null, className: 'fa fa-bold' },
+    italic: { icon: null, className: 'fa fa-italic' },
+    underline: { icon: null, className: 'fa fa-underline' },
+    strikethrough: { icon: null, className: 'fa fa-strikethrough' },
+    monospace: { icon: brackets, className: 'fa' },
+    superscript: { icon: null, className: 'fa fa-superscript' },
+    subscript: { icon: null, className: 'fa fa-subscript' },
+  },
+  blockType: { className: 'demo-option-custom-wide', dropdownClassName: 'demo-dropdown-custom' },
+  fontSize: { className: 'demo-option-custom-medium' },
+  list: {
+    unordered: { icon: null, className: 'fa fa-list-ul' },
+    ordered: { icon: null, className: 'fa fa-list-ol' },
+    indent: { icon: null, className: 'fa fa-indent' },
+    outdent: { icon: null, className: 'fa fa-outdent' },
+  },
+  textAlign: {
+    left: { icon: null, className: 'fa fa-align-left' },
+    center: { icon: null, className: 'fa fa-align-center' },
+    right: { icon: null, className: 'fa fa-align-right' },
+    justify: { icon: null, className: 'fa fa-align-justify' },
+  },
+  fontFamily: { className: 'demo-option-custom-wide', dropdownClassName: 'demo-dropdown-custom' },
+  colorPicker: { icon: null, className: 'fa fa-pencil', popupClassName: 'demo-popup-custom' },
+  link: {
+    popupClassName: 'demo-popup-custom',
+    link: { icon: null, className: 'fa fa-chain' },
+    unlink: { icon: null, className: 'fa fa-unlink' },
+  },
+  emoji: { icon: null, className: 'fa fa-smile-o', popupClassName: 'demo-popup-custom' },
+  embedded: { className: 'demo-option-custom', popupClassName: 'demo-popup-custom' },
+  image: { icon: null, className: 'fa fa-picture-o', popupClassName: 'demo-popup-custom' },
+  remove: { icon: null, className: 'fa fa-eraser' },
+  history: {
+    undo: { icon: null, className: 'fa fa-undo' },
+    redo: { icon: null, className: 'fa fa-repeat' },
   },
 };
