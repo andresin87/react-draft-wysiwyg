@@ -34,6 +34,7 @@ import EmbeddedControl from '../EmbeddedControl';
 import EmojiControl from '../EmojiControl';
 import ImageControl from '../ImageControl';
 import HistoryControl from '../HistoryControl';
+import ViewControl from '../ViewControl';
 import LinkDecorator from '../../decorators/Link';
 import MentionDecorator from '../../decorators/Mention';
 import BlockRendererFunc from '../../renderer';
@@ -267,6 +268,7 @@ export default class WysiwygEditor extends Component {
       image,
       remove,
       history,
+      view,
     } = toolbar;
 
     return (
@@ -358,6 +360,12 @@ export default class WysiwygEditor extends Component {
                 editorState={editorState}
                 onChange={this.onChange}
                 config={history}
+              />}
+              {options.indexOf('history') >= 0 && <ViewControl
+                modalHandler={this.modalHandler}
+                editorState={editorState}
+                onChange={this.onChange}
+                config={view}
               />}
             </div>
           :

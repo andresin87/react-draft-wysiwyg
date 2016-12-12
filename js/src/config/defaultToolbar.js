@@ -23,6 +23,11 @@ import undo from '../../../images/undo.svg';
 import redo from '../../../images/redo.svg';
 import subscript from '../../../images/subscript.svg';
 import superscript from '../../../images/superscript.svg';
+import feather from '../../../images/feather.svg'
+import html from '../../../images/html.svg'
+import markdown from '../../../images/markdown.svg'
+import preview from '../../../images/preview.svg'
+import raw from '../../../images/raw.svg'
 
 /**
 * This is default toolbar configuration,
@@ -90,5 +95,15 @@ export default {
     options: ['undo', 'redo'],
     undo: { icon: undo, className: undefined },
     redo: { icon: redo, className: undefined },
+  },
+  view: {
+    inDropdown: true,
+    className: undefined,
+    options: ['edit', 'html', 'markdown', 'preview', 'raw'],
+    edit: { icon: feather, className: undefined },
+    html: { icon: html, className: undefined },
+    markdown: { icon: markdown, className: undefined },
+    preview: { icon: preview, className: undefined },
+    raw: { icon: raw, className: undefined },
   },
 };
